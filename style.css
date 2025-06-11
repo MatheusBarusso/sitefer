@@ -1,11 +1,36 @@
 /* Geral */
 
 .titulo {
-    font-size: 100px;
-    color: #000000;
+    font-size: 50px;
+    color: #ffffff;
     text-align: center;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 20px;
+    line-height: 1.2em;
+    padding-bottom: 20px;
+    position: relative; /* Adicionado para permitir posicionamento absoluto do pseudo-elemento */
+    z-index: 1; /* Garante que o texto fique acima do retângulo */
+}
+
+.titulo h1 {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 0px 0px; /* Reduzindo o padding */
+}
+
+.titulo h1::before {
+    content: '';
+    display: block;
+    width: 350px; /* Ajustando ligeiramente a largura para um melhor ajuste */
+    height: 70px; /* Ajustando ligeiramente a altura */
+    background-color: #ff9100;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 body {
@@ -16,7 +41,9 @@ body {
 /* Contador */
 .countup {
   text-align: center;
-  margin: 120px;
+  margin: 1px;
+  margin-bottom: 10px;
+  padding-top: 1  5px;
 }
 .countup .timeel {
   display: inline-block;
@@ -35,16 +62,18 @@ body {
   color: black;
 }
 
-
 /* Slider */
 .container-fluid {
-    padding: 0;
-    width: 80%;
-  height: 80%;
+    padding-top: 20px;
+    width: 95%;
+}
+
+#mainSlider .carousel-inner {
+  border-radius: 20px 20px 20px 20px;
 }
 
 #mainSlider .carousel-caption {
-    top: 85%;
+    top: 1%;
 }
 
 #mainSlider .carousel-caption h2 {
@@ -58,14 +87,18 @@ body {
 
 .main-btn {
     background-color: #151515;
-    background-blend-mode: overlay; ;
+    background-blend-mode: overlay;
     color: #ffffff;   
-    width: 100px;
-    height: 20px;
-    padding: 6px 6px;
+    width: 90%; 
+    max-width: 400px; 
+    padding: 10px 15px; 
     border-radius: 30px;
     border: 3px solid transparent;
     text-decoration: none;
+    white-space: normal; 
+    display: inline-block;
+    text-align: center; 
+    box-sizing: border-box; 
 }
 
 .main-btn:hover {
